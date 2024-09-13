@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi StoryMap</title>
+    <link rel="stylesheet" href="lib/leaflet.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        #map {
+            position: relative;
+        }
+        #backToIndexButton {
+            position: absolute;
+            top: 10px;
+            left: 50px;
+            z-index: 1000;
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="content">
+            <div id="slides">
+                <!-- Diapositiva del índice -->
+                <div class="slide" data-lat="4.638878" data-lng="-74.085126" data-zoom="12">
+                    <h2>Índice</h2>
+                    <!-- Aquí agregamos la imagen -->
+                    <!-- <img src="assets/images/imagen_index.png" alt="Imagen de Índice" style="width: 100%; height: auto;">-->
+                    <div id="index">
+                        <!-- Botones del índice se generarán dinámicamente con JavaScript -->
+                    </div>
+                </div>
+
+                <div class="slide" data-lat="4.624110" data-lng="-74.065816" data-zoom="18.5">
+                    <h2>1. Parque Nacional</h2>
+                    <img src="assets/images/PARQUE_NACIONAL.jpg" alt="Imagen 1">
+                    <p>Este parque es escenario de actividades culturales, recreativas y deportivas para la ciudadanía.</p>
+                    <p></p>
+                    <p>Cuenta con un servicio de aseo de 7 de la mañana a 4 pm y de lunes a domingo y festivos.</p>
+                </div>
+
+                <div class="slide" data-lat="4.647941" data-lng="-74.077435" data-zoom="17">
+                    <h2>2. Campín- Coliseo</h2>
+                    <img src="assets/images/Campin2.JPG" alt="Imagen 2">
+                    <p>Esta es una zona mixta comercial y residencial y en sus alrededores se encuentran varias ventas informales y una estación de Transmilenio.</p>
+                </div>
+
+                <div class="slide" data-lat="4.667412" data-lng="-74.054013" data-zoom="18">
+                    <h2>3. Zona T</h2>
+                    <img src="assets/images/Zona T.JPG" alt="Imagen 1">
+                    <p>En la ciudad hace parte de la oferta comercial, empresarial y turística de Bogotá, es un sector peatonal  y hace parte de una zona comercial más amplia 
+                    denominada la Zona Rosa, Colinda con el Centro Comercial Andino y cuenta con una amplia oferta de restaurantes, bares, almacenes de ropa, entre otros.</p>
+                </div>
+
+                <div class="slide" data-lat="4.598107" data-lng="-74.076009" data-zoom="18.5">
+                    <h2>4. Plaza de Bolívar</h2>
+                    <img src="assets/images/PLAZA DE BOLÍVAR.jpg" alt="Imagen 2">
+                    <p>La Plaza de Bolivia es la plaza principal de la ciudad porque se constituyó como el centro geográfico, político y social de Bogotá. En el marco de esta 
+                    plaza se encuentran ubicados los principales edificios estatales: El Palacio de Nariño (sede presidencial), El Palacio de Justicia, El Capitolio Nacional, 
+                    El Palacio Liévano (sede de la Alcaldía Mayor de Bogota). También se encuentran edificaciones eclesiásticas emblemáticas de la ciudad como La Catedral Basílica 
+                    Metropolitana y el Colegio Mayor de San Bartolomé.</p>
+                </div>
+
+                <div class="slide" data-lat="4.654256" data-lng="-74.114083" data-zoom="17.5">
+                    <h2>5. Terminal Salitre</h2>
+                    <img src="assets/images/nina.png" alt="Imagen 2">
+                    <p>Es la principal estación de buses de Bogotá y de Colombia. Se encuentra en el barrio Ciudad Salitre, al occidente de Bogotá. Actualmente operan 86 empresas 
+                    con destino a múltiples orígenes y regiones nacionales e internacionales. Está ubicado en una importante zona comercial y turística de la ciudad. </p>
+                </div>
+
+                <div class="slide" data-lat="4.664609" data-lng="-74.064306" data-zoom="19">
+                    <h2>6. San Felipe- Parque de la araña</h2>
+                    <img src="assets/images/sanfelipe.png" alt="Imagen 2">
+                    <p>La estrategia se implementó en el Parque de la Araña en San Felipe ubicado en Cl. 75 #22-58 en la Localidad de Barrios Unidos en Bogotá, el parque y sus alrededores 
+                    se han convertido en un sector cultural con oferta de galerías de arte, restaurantes, conciertos y otra oferta cultural.</p>
+                </div>
+
+                <div class="slide" data-lat="4.615513" data-lng="-74.068123" data-zoom="19">
+                    <h2>7. Museo Nacional</h2>
+                    <img src="assets/images/museo_nacional.jpg" alt="Imagen 2">
+                    <p>Se ubica en el barrio San Martín, Localidad de Santa de, en el corazón del centro internacional, sobre la emblemática carrera séptima, una de las principales vías de 
+                    la ciudad de Bogotá.</p>
+                </div>
+                
+                <div class="slide" data-lat="4.566674" data-lng="-74.143589" data-zoom="19">
+                    <h2>8. Ciudad Bolívar- Alcaldía Local</h2>
+                    <img src="assets/images/ciudad_bolivar.jpg" alt="Imagen 2">
+                    <p>Se ubica en la Carrera 73 59 - 12 Sur, en el barrio San Francisco en la Localidad. Colinda con la Casa de Justicia y la Personería Local. Se ubica en una zona mixta 
+                    residencial y comercial y se encuentra muy cerca del portal Tunal de Transmilenio. Esta entidad se ubica en una zona aislada de vías vehiculares pero con espacio público 
+                    amplio para circulación transeúnte.</p>
+                </div>
+
+                <!-- Agrega más diapositivas según sea necesario -->
+            </div>
+        </div>
+        <div id="map">
+            <div id="backToIndexButton">Volver al Índice</div>
+        </div>
+    </div>
+    <script src="lib/leaflet.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
