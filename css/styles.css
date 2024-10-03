@@ -14,7 +14,7 @@ body, html {
 }
 
 #content {
-    width: 55%;
+    width: 75%;
     height: 100%;
     overflow-y: auto;
     padding: 20px;
@@ -23,7 +23,7 @@ body, html {
 }
 
 #map {
-    width: 100%;
+    width: 80%;
     height: 100%;
 }
 
@@ -45,8 +45,11 @@ body, html {
 }
 
 .slide img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-top: 10px; /* Añadir margen superior para espaciar de otros elementos */
+    display: block;        /* Convierte la imagen en un bloque */
+    margin-left: auto;     /* Centra la imagen horizontalmente */
+    margin-right: auto;    /* Centra la imagen horizontalmente */
+    max-width: 60%;       /* Ajusta el ancho máximo al 100% del contenedor */
+    height: auto;          /* Mantiene la proporción de la imagen */
+    border-radius: 5px;    /* Mantiene el borde redondeado */
+    margin-top: 10px;      /* Añade margen superior */
 }
